@@ -1,0 +1,219 @@
+#signup-section-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mainColor);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#sign-up-container {
+  width: 59.8rem;
+  height: 60.7rem;
+  padding: 4.8rem 8.8rem;
+  border-radius: 3rem;
+  background: var(--white);
+  box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  justify-content: center;
+}
+
+#sign-up {
+  width: 42.2rem;
+  height: 51.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+
+#sign-up-header {
+  width: 31.5rem;
+  height: 7.4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#sign-up-header h2 {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#sign-up-form {
+  width: 42.2rem;
+  height: 28.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sign-up-container {
+  width: 42.2rem;
+  height: 4.8rem;
+  padding: 1.2rem 2.1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--inputStyle);
+}
+
+#sign-up-name,
+#sign-up-email,
+#sign-up-password,
+#sign-up-confirm-password {
+  border: unset;
+
+  width: 95%;
+  font-size: 1.9rem;
+  font-weight: var(--fontW2);
+  font-style: normal;
+  line-height: 120%;
+  background-color: var(--white);
+}
+
+#sign-up-name::placeholder,
+#sign-up-email::placeholder,
+#sign-up-password::placeholder,
+#sign-up-confirm-password::placeholder {
+  color: var(--inputStyle);
+}
+
+#sign-up-name:focus,
+#sign-up-email:focus,
+#sign-up-password:focus,
+#sign-up-confirm-password:focus {
+  outline: none;
+}
+
+#sign-up-btn {
+  width: 10.6rem;
+  height: 4.3rem;
+  padding: 1rem 2rem;
+  border: unset;
+  border-radius: 0.8rem;
+  background: var(--mainColor);
+
+  color: var(--white);
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+  cursor: pointer;
+}
+
+#sign-up-btn:hover {
+  background: var(--btnHoverColor);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#sign-up-btn:active {
+  color: var(--mainColor);
+  background: var(--white);
+}
+
+#privacy-policy-container {
+  width: 23.1rem;
+  height: 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-policy-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.privacy-policy {
+  width: 40rem;
+  font-size: 1.4rem;
+  color: var(--error);
+  display: none;
+  justify-content: center;
+}
+
+#privacy-policy-img {
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+#privacy-policy-paragraph {
+  color: var(--footerLinks);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+}
+
+#privacy-policy-link {
+  color: var(--mainColor);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+  cursor: pointer;
+}
+
+#privacy-policy-link:hover {
+  color: var(--btnHoverColor);
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+#sign-up-modal {
+  width: 32.6rem;
+  height: 7.4rem;
+  position: absolute;
+  top: -10rem;
+  border-radius: 2rem;
+  background: var(--mainColor);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+#sign-up-modal p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#sign-up-footer {
+  width: 24rem;
+  height: 3.5rem;
+  position: absolute;
+  bottom: 4.2rem;
+  left: calc(50% - 12rem);
+  display: flex;
+  justify-content: space-between;
+}
+
+#sign-up-footer a {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+  cursor: pointer;
+}

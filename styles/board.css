@@ -1,0 +1,866 @@
+#board-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+#board-head-container {
+  width: 100%;
+  height: 26%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-head-container {
+  width: 120.8rem;
+}
+
+#board-head-search-container {
+  width: 107.8rem;
+  height: 5.1rem;
+  margin-top: 7.2rem;
+
+  display: flex;
+}
+
+#board-head-search {
+  width: 31.2rem;
+  height: 4.8rem;
+  padding: 0.8rem 1.6rem;
+  border: unset;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--divider);
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#board-head-search:hover {
+  border: 0.1rem solid var(--mainColor);
+}
+
+#board-head-search input {
+  width: 22rem;
+  height: 1.9rem;
+  font-family: Inter;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-head-search input::placeholder {
+  color: var(--inputStyle);
+}
+
+#board-divider-img-container {
+  width: 4.8rem;
+  height: 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#board-head-search-divider {
+  width: 0.1rem;
+  height: 100%;
+  background-color: var(--inputStyle);
+}
+
+#board-head-search-img {
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+#board-add-task {
+  width: 17rem;
+  height: 5.1rem;
+  padding: 1.6rem 1rem;
+  border: unset;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--mainColor);
+  background: var(--mainColor);
+  margin-left: 3.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+#board-add-task:hover {
+  background: var(--btnHoverColor);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#board-add-task:active {
+  border: 0.1rem solid var(--mainColor);
+  background: var(--btnActive);
+}
+
+#board-add-task p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-task-progress {
+  width: 120.8rem;
+  height: 2.8rem;
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-task-progress {
+  width: 24.4rem;
+  height: 2.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-task-progress p {
+  color: var(--footerLinks);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.board-task-progress img {
+  cursor: pointer;
+}
+
+#board-progress-containers {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#progress-containers {
+  width: 120.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-container {
+  width: 24.4rem;
+  margin-top: 2.9rem;
+  position: relative;
+}
+
+.progress-card {
+  width: 100%;
+  padding: 1.6rem;
+  border-radius: 2.4rem;
+  background: var(--white);
+  box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.4rem;
+  margin-bottom: 2rem;
+  transition: all 100ms ease-in-out;
+}
+
+#progress-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.progress-card-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-card-head {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.progress-card-head-modal {
+  position: absolute;
+  width: 21rem;
+  height: 17rem;
+  background-color: var(--white);
+  right: 2.2rem;
+  top: 2.2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+  display: none;
+  flex-direction: column;
+}
+
+.progress-card-head-modal img {
+  width: 2.5rem;
+  align-self: flex-end;
+}
+
+.progress-modal-container h4 {
+  padding: 0.5rem 0rem;
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.55rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.progress-modal-container p {
+  padding: 0.5rem 0rem;
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.55rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.progress-card-category {
+  width: 14rem;
+  height: 2.7rem;
+  padding: 0.4rem 1.6rem;
+  border-radius: 0.8rem;
+  display: flex;
+  text-align: center;
+}
+
+.progress-card-category p {
+  width: 13rem;
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 1.55rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.progress-card-title-description-container {
+  width: 100%;
+  height: 8.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.progress-card-title {
+  width: 100%;
+  height: 3.8rem;
+
+  color: var(--mainColor);
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.progress-card-description {
+  color: var(--divider);
+  font-family: Inter;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.progress-card-subtasks-status {
+  width: 100%;
+  height: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-percent-container {
+  width: 12.8rem;
+  height: 0.8rem;
+  background-color: var(--progressPercent);
+  border-radius: 1rem !important;
+}
+
+.progress-percent-status {
+  height: 0.8rem;
+  border-radius: 1rem !important;
+  background-color: aqua;
+}
+
+.progress-percent-status-info {
+  color: var(--black);
+  font-family: Inter;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.progress-assigned-contacts {
+  width: 100%;
+  height: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-card-assigned-contacts {
+  display: flex;
+  position: relative;
+}
+
+.progress-assigned-contacts img {
+  width: 2.2rem;
+}
+
+.progress-card-assigned-contact {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: unset;
+  border-radius: 4.5rem;
+  border: 0.1rem solid var(--white);
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.progress-card-assigned-contact-first-letter,
+.progress-card-assigned-contact-second-letter {
+  color: var(--white);
+  font-family: Inter;
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.progress-card-skeleton {
+  width: 24.4rem;
+  height: 95%;
+  position: absolute;
+  top: 0;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  border: 0.1rem dashed var(--divider);
+  background: var(--noTask);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.16);
+}
+
+.no-tasks {
+  width: 24.4rem;
+  height: 4.8rem;
+  border-radius: 1rem;
+  border: 0.1rem dashed var(--divider);
+  background: var(--noTask);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.16);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.no-tasks p {
+  color: var(--divider);
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-modal-card {
+  width: 52.5rem;
+  height: 90%;
+  position: fixed;
+  left: 50%;
+  top: 150%;
+  transform: translate(-50%, -50%);
+  transition: top 0.5s ease-in-out;
+  background-color: var(--white);
+
+  border-radius: 3rem;
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.16);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+#board-scroll {
+  width: 85%;
+  height: 85%;
+  overflow-y: scroll;
+  padding-right: 1rem;
+  margin-top: 6rem;
+}
+
+#board-scroll::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+#board-container::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+#board-scroll::-webkit-scrollbar-thumb,
+#board-container::-webkit-scrollbar-thumb {
+  background-color: var(--scrollThumb);
+}
+
+#board-scroll::-webkit-scrollbar-track,
+#board-container::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+
+#board-modal-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 4rem;
+}
+
+#board-modal-category {
+  width: 100%;
+  height: 3.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modal-category {
+  width: 16rem;
+  height: 3.6rem;
+  padding: 0.4rem 2.4rem;
+  border: unset;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-category p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#modal-close {
+  width: 3.2rem;
+  height: 3.6rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+.modal-close-img {
+  cursor: pointer;
+}
+
+#board-modal-title {
+  width: 100%;
+}
+
+#board-modal-title h2 {
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 6.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#board-modal-description {
+  width: 100%;
+}
+
+#board-modal-description p {
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-modal-date {
+  width: 100%;
+  display: flex;
+}
+
+#board-modal-date strong {
+  color: var(--footerLinks);
+  font-family: Inter;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#board-modal-date p {
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+  margin-left: 2.5rem;
+}
+
+#board-modal-priority {
+  width: 100%;
+  display: flex;
+}
+
+#board-modal-priority p strong {
+  color: var(--footerLinks);
+  font-family: Inter;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#board-modal-priority-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.5rem;
+
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-modal-priority-info img {
+  margin-left: 1rem;
+}
+
+.assigned-to {
+  margin-bottom: 1rem !important;
+}
+
+#board-modal-assigned-to p strong {
+  color: var(--footerLinks);
+  font-family: Inter;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.modal-assigned-to {
+  width: 100%;
+  padding: 0.7rem 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.modal-assigned-to-initials {
+  width: 4.2rem;
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4.5rem;
+  background: var(--white);
+
+  color: var(--white);
+  text-align: center;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.modal-assigned-full-name {
+  margin-left: 1.6rem;
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-modal-subtasks p {
+  color: var(--footerLinks);
+  font-family: Inter;
+  font-size: 2.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#modal-subtask {
+  padding-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#modal-subtask div {
+  display: flex;
+  align-items: center;
+}
+
+#modal-subtask img {
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+#modal-subtask p {
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+  margin-left: 1.6rem;
+}
+
+#board-modal-delete-edit {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#modal-delete,
+#modal-edit {
+  width: 11rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#modal-delete img {
+  width: 9rem;
+}
+
+#modal-edit img {
+  width: 8rem;
+}
+
+#modal-delete p,
+#modal-edit p {
+  margin-left: 0.8rem;
+  color: var(--summaryColor);
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#board-modal-delete-edit-divider {
+  width: 0.1rem;
+  height: 2.4rem;
+  background-color: var(--inputStyle);
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+#board-modal-edit-container {
+  width: 100%;
+  display: none;
+}
+
+.modal-edit-container {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.board-modal-edit-img {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  cursor: pointer;
+}
+
+.add-task-select-subtasks-input-error::placeholder {
+  color: var(--errorTxt) !important;
+}
+
+#modal-btn {
+  all: unset;
+  width: 7.8rem;
+  padding: 1.6rem 1rem;
+  border-radius: 1rem;
+  background: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#modal-btn:hover {
+  cursor: pointer;
+  background: var(--btnHoverColor);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#modal-btn p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.date-calendar-hidden {
+  width: 70%;
+  display: none;
+  position: absolute;
+  z-index: 9999;
+}
+
+#add-new-task-modal {
+  width: 51.8rem;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -55rem;
+  overflow-y: scroll;
+  background-color: var(--white);
+
+  border-radius: 3rem 0rem 3rem 3rem;
+  background: var(--white);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.16);
+
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  z-index: 9;
+}
+
+.add-new-task-modal {
+  width: 100% !important;
+  height: 70rem;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+}
+
+.add-new-task-modal-header {
+  width: 100% !important;
+  height: 15rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.add-new-task-modal-header p {
+  position: absolute;
+  top: 4.9rem;
+  left: 4rem;
+  color: var(--black);
+  font-family: Open Sans;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.add-new-task-modal-img {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  cursor: pointer;
+}
+
+#add-task-modal-btn,
+.add-task-modal-btn {
+  all: unset;
+  width: 17.4rem;
+  height: 3rem;
+  padding: 1.6rem 1rem;
+  position: absolute;
+  bottom: 2.4rem;
+  right: 4rem;
+  border-radius: 1rem;
+  background: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.add-task-modal-btn {
+  right: 0rem;
+  margin-top: 3rem;
+  position: relative;
+  justify-self: center;
+}
+
+#add-task-modal-btn:hover,
+.add-task-modal-btn:hover {
+  background: var(--btnHoverColor);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#add-task-modal-btn p,
+.add-task-modal-btn p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+.no-contacts-added,
+.no-subtasks-added {
+  all: unset !important;
+  color: var(--black) !important;
+  font-family: Open Sans !important;
+  font-size: 1.6rem !important;
+  font-style: normal !important;
+  font-weight: var(--fontw2) !important;
+  line-height: 120% !important;
+  margin-left: 2.5rem !important;
+}
+
+.draggable {
+  cursor: not-allowed;
+  opacity: 0.5; /* Optional: Make the element semi-transparent to indicate it's not draggable */
+}
+
+#add-new-task-modal::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#add-new-task-modal::-webkit-scrollbar-thumb {
+  background-color: #bcbcbc;
+}
+
+#add-new-task-modal::-webkit-scrollbar-track {
+  background-color: #eee;
+}

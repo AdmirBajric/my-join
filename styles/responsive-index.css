@@ -1,0 +1,318 @@
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 55%;
+  }
+
+  #privacy-policy-index-side-bar,
+  #legal-notice-index-side-bar {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 50%;
+  }
+
+  #privacy-policy-index-side-bar,
+  #legal-notice-index-side-bar {
+    display: none;
+  }
+
+  #backToTopBtn {
+    bottom: 2rem;
+    right: 1rem;
+  }
+
+  #index-privacy-policy-header h2 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  html {
+    font-size: 50%;
+  }
+
+  #forgot-password-,
+  #reset-password-container {
+    width: 67rem;
+    padding: 3.8rem 4.8rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  html {
+    font-size: 50%;
+  }
+
+  #footer {
+    top: 86rem;
+  }
+
+  #logo-big,
+  #logo-big img {
+    width: 10rem;
+    height: 12.1rem;
+  }
+
+  #logo-big img {
+    position: absolute;
+    top: 3.7rem;
+    left: 3.8rem;
+    top: calc(50% - 6.05rem);
+    left: calc(50% - 5rem);
+  }
+
+  #small-logo-blue {
+    position: absolute;
+    width: 10rem;
+    height: 12.1rem;
+    top: 3.6rem;
+    left: 3.7rem;
+  }
+
+  @keyframes moveAndResizeImage {
+    0% {
+      width: 10rem;
+      height: 12.1rem;
+      top: calc(50% - 6.05rem);
+      left: calc(50% - 5rem);
+    }
+    100% {
+      top: 3.7rem;
+      left: 3.8rem;
+    }
+  }
+
+  #register-container {
+    top: 78.2rem;
+    right: calc(50% - 13.6rem);
+    width: 27.2rem;
+    height: 4.3rem;
+  }
+
+  #register-text {
+    width: 14.9rem;
+    height: 2.3rem;
+  }
+
+  #register-text p {
+    font-size: 1.9rem;
+  }
+
+  #register-text-btn {
+    width: 9.8rem;
+    height: 4.3rem;
+    font-size: 1.9rem;
+  }
+
+  #log-in {
+    width: 39.6rem;
+    height: 55.2rem;
+    top: 18.7rem;
+    left: calc(50% - 19.8rem);
+  }
+
+  #log-in-container {
+    padding: 3.2rem 1.6rem;
+  }
+
+  #log-in-header {
+    width: 31.5rem;
+    height: 7.2rem;
+  }
+
+  #log-in-header h2 {
+    font-size: 4.7rem;
+  }
+
+  #log-in-form {
+    width: 36.4rem;
+    height: 15.2rem;
+  }
+
+  #log-in-assistance-container {
+    width: 36.4rem;
+    height: 6.7rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 0rem 1.6rem;
+  }
+
+  #log-in-buttons {
+    width: 18rem;
+    height: 11.7rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #log-in-btn,
+  #guest-log-in-btn {
+    width: 18rem;
+    height: 4.8rem;
+  }
+
+  #footer {
+    width: 24rem;
+    height: 3.5rem;
+    position: absolute;
+    bottom: 2.6rem;
+    left: calc(50% - 12rem);
+  }
+
+  #sign-up-footer {
+    width: 24rem;
+    height: 3.5rem;
+    position: absolute;
+    bottom: 4.2rem;
+    left: calc(50% - 12rem);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #sign-up-footer a {
+    color: var(--white);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: var(--fontW2);
+    line-height: 120%;
+    cursor: pointer;
+  }
+
+  #small-logo-white,
+  #small-logo-white img {
+    width: 6.4rem;
+    height: 7.8rem;
+    top: 3.7rem;
+    left: 3.8rem;
+  }
+
+  #sign-up-container {
+    width: 39.6rem;
+    height: 60.7rem;
+    padding: 3.2rem 0rem;
+  }
+
+  #sign-up {
+    width: 36.4rem;
+    height: 54.5rem;
+  }
+
+  #forgot-password-back-btn,
+  #reset-password-back-btn,
+  #sign-up-back-btn {
+    position: absolute;
+    left: 3rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+
+  #sign-up-form {
+    width: 36.4rem;
+    height: 31.2rem;
+  }
+
+  .sign-up-container {
+    width: 36.4rem;
+    height: 4.8rem;
+  }
+
+  #sign-up-btn {
+    width: 18rem;
+    height: 4.8rem;
+  }
+
+  #forgot-password-container,
+  #reset-password-container {
+    width: 39.6rem;
+    height: 50.2rem;
+    padding: 3.2rem 0rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  #forgot-password,
+  #reset-password {
+    width: 36.4rem;
+    height: 100%;
+  }
+
+  #forgot-password-header,
+  #reset-password-header {
+    width: 31.5rem;
+    height: 9.6rem;
+  }
+
+  #forgot-password-header h2,
+  #reset-password-header h2 {
+    font-size: 3.8rem;
+    text-align: center;
+  }
+
+  #forgot-password-topic,
+  #reset-password-topic {
+    width: 32.1rem;
+    height: 6.9rem;
+  }
+
+  #forgot-password-topic p,
+  #reset-password-topic p {
+    font-size: 1.9rem;
+  }
+
+  #forgot-password-email {
+    width: 32.7rem;
+    height: 4.8rem;
+  }
+
+  #reset-password-email {
+    width: 32.7rem;
+    height: 14.4rem;
+  }
+
+  .reset-password-email-container {
+    width: 32.7rem;
+  }
+
+  #forgot-password-btn,
+  #reset-password-btn {
+    width: 20.8rem;
+    font-size: 1.9rem;
+  }
+
+  #forgot-password-modal,
+  #reset-your-password-modal {
+    width: 32.7rem;
+    left: calc(50% - 16.35rem);
+  }
+
+  #forgot-password-modal-paragraph,
+  #reset-your-password-modal {
+    font-size: 1.9rem;
+  }
+
+  #privacy-policy-index-main,
+  #legal-notice-index-main {
+    padding: 4rem 2.5rem;
+  }
+
+  #index-privacy-policy-header h2,
+  #help-header h2 {
+    font-size: 4.2rem;
+  }
+
+  #backToTopBtn {
+    bottom: 4rem;
+    right: 0rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #header-info-container {
+    display: none;
+  }
+}

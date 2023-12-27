@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/helper.css" />
+    <link rel="stylesheet" href="./styles/template.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/template-side-bar.css" />
+    <link rel="stylesheet" href="./styles/help.css" />
+    <link rel="stylesheet" href="./styles/privacy-policy.css" />
+    <link rel="stylesheet" href="./styles/legal-notice.css" />
+    <link rel="stylesheet" href="./styles/add-task.css" />
+    <link rel="stylesheet" href="./styles/contacts.css" />
+    <link rel="stylesheet" href="./styles/board.css" />
+    <link rel="stylesheet" href="./styles/summary.css" />
+    <link rel="stylesheet" href="./styles/greeting.css" />
+    <link rel="stylesheet" href="./styles/responsive-summary.css" />
+    <title>Join-Summary</title>
+  </head>
+  <body onload="init(); responsiveSummary()">
+    <!-- Overlay Start -->
+    <div id="overlay"></div>
+    <!-- Overlay End -->
+    <!-- Template Header Start -->
+    <div class="header" w3-include-html="./assets/templates/template-header.html"></div>
+    <!-- Template Header End -->
+
+    <!-- Template Sidebar Start -->
+    <div class="template-side-bar" w3-include-html="./assets/templates/template-side-bar.html"></div>
+    <!-- Template Sidebar End -->
+
+    <!-- Main Container Start -->
+    <div class="main-container">
+      <!-- Greeting Start -->
+      <div id="greeting-container" w3-include-html="./assets/templates/template-greeting.html"></div>
+      <!-- Greeting End -->
+      <!-- Template Summary Start -->
+      <div id="summary-container" w3-include-html="./assets/templates/template-summary.html"></div>
+      <!-- Template Summary End -->
+
+      <!-- Template Help Start -->
+      <div id="help-container" w3-include-html="./assets/templates/template-help.html"></div>
+      <!-- Template Help End -->
+
+      <!-- Template Privacy Policy Start -->
+      <div id="privacy-policy-container" w3-include-html="./assets/templates/template-privacy-policy.html"></div>
+      <!-- Template Privacy Policy End -->
+
+      <!-- Template Legal Notice Start -->
+      <div id="legal-notice-container" w3-include-html="./assets/templates/template-legal-notice.html"></div>
+      <!-- Template Legal Notice End -->
+
+      <!-- Template Contacts Start -->
+      <div id="contacts-container" w3-include-html="./assets/templates/template-contacts.html"></div>
+      <!-- Template Contacts End -->
+
+      <!-- Template Add Task Start -->
+      <div id="add-task-container" w3-include-html="./assets/templates/template-add-task.html"></div>
+      <!-- Template Add Task End -->
+
+      <!-- Template Board Start-->
+      <div id="board-container" w3-include-html="./assets/templates/template-board.html"></div>
+      <!-- Template Board End-->
+    </div>
+    <!-- Main Container End -->
+
+    <script defer src="./js/helper.js"></script>
+    <script defer src="./js/storage.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/header.js"></script>
+    <script defer src="./js/template-side-bar.js"></script>
+    <script defer src="./js/help.js"></script>
+    <script defer src="./js/html-templates.js"></script>
+    <script defer src="./js/contacts.js"></script>
+    <script defer src="./js/contacts-helper.js"></script>
+    <script defer src="./js/contacts-progress.js"></script>
+    <script defer src="./js/add-task.js"></script>
+    <script defer src="./js/add-task-helper.js"></script>
+    <script defer src="./js/add-task-event.js"></script>
+    <script defer src="./js/add-task-event-helper.js"></script>
+    <script defer src="./js/add-task-crud.js"></script>
+    <script defer src="./js/add-task-crud-helper.js"></script>
+    <script defer src="./js/board.js"></script>
+    <script defer src="./js/board-helper.js"></script>
+    <script defer src="./js/board-progress.js"></script>
+    <script defer src="./js/board-progress-helper.js"></script>
+    <script defer src="./js/summary.js"></script>
+    <script defer src="./js/greeting.js"></script>
+    <script defer src="./js/responsive-summary.js"></script>
+    <script defer src="./js/responsive-summary-helper.js"></script>
+    <script src="https://unpkg.com/v8n/dist/v8n.min.js"></script>
+  </body>
+</html>

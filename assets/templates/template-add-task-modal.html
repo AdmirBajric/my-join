@@ -1,0 +1,139 @@
+<div class="add-task-left-container-modal">
+  <div id="add-task-modal-header">
+    <h2>Add Task</h2>
+  </div>
+  <div id="add-task-title-container">
+    <div id="add-task-title">
+      <input
+        id="add-task-title-input"
+        type="text"
+        required
+        placeholder="Enter a title"
+      />
+    </div>
+    <p id="add-task-title-err-msg">This field is required</p>
+  </div>
+
+  <div id="add-task-description">
+    <div>
+      <p>Description</p>
+    </div>
+    <textarea
+      placeholder="Enter a description"
+      name="Description"
+      id="add-task-textarea-description"
+    ></textarea>
+    <p id="add-task-description-err-msg">This field is required</p>
+  </div>
+
+  <div id="add-task-date">
+    <p>Due date</p>
+    <div id="date">
+      <input id="date-calendar" type="date" placeholder="dd/mm/yyyy" required />
+      <img
+        id="date-img"
+        src="./assets/img/add-task-date.svg"
+        alt="Date image"
+      />
+    </div>
+    <p id="add-task-date-err-msg">This field is required</p>
+  </div>
+
+  <div id="add-task-priority">
+    <p>Priority</p>
+    <div id="priority">
+      <div id="priority-urgent" onclick="priorityUrgent()">
+        <p>Urgent</p>
+        <img
+          id="urgent-img"
+          src="./assets//img/prio-alta.svg"
+          alt="Prio urgent"
+        />
+      </div>
+
+      <div id="priority-medium" onclick="priorityMedia()">
+        <p>Medium</p>
+        <img
+          id="media-img"
+          src="./assets/img/prio-media.svg"
+          alt="Prio medium"
+        />
+      </div>
+
+      <div id="priority-low" onclick="priorityLow()">
+        <p>Low</p>
+        <img id="low-img" src="./assets/img/prio-baja.svg" alt="Prio low" />
+      </div>
+    </div>
+  </div>
+
+  <div id="add-task-assigned">
+    <p>Assigned to</p>
+    <div id="add-task-assigned-contacts">
+      <p id="add-task-assigned-contacts-info">Select contacts to assign</p>
+      <input
+        autocomplete="off"
+        id="add-task-assigned-contacts-input"
+        type="text"
+      />
+      <a href="#add-task-assigned">
+        <img
+          id="assigned-contacts-img"
+          src="./assets/img/arrow-dropdown-down.svg"
+          alt="Assigned image"
+        />
+      </a>
+    </div>
+
+    <div id="add-task-all-contacts"></div>
+    <div id="add-task-selected-contacts"></div>
+  </div>
+
+  <div id="add-task-category">
+    <p>Category</p>
+    <div id="add-task-select-category">
+      <p>Select task category</p>
+      <img
+        id="select-category-img"
+        src="./assets/img/arrow-dropdown-down.svg"
+        alt="Catgeroy image"
+      />
+    </div>
+    <p class="add-task-category-err-msg">This field is required</p>
+
+    <div id="add-task-category-list"></div>
+  </div>
+
+  <div id="add-task-subtasks">
+    <p>Subtasks</p>
+    <div id="add-task-select-subtasks">
+      <input
+        id="add-task-select-subtasks-input"
+        type="text"
+        placeholder="Add new subtask"
+      />
+      <img
+        id="add-task-select-subtasks-img"
+        src="./assets/img/subtask-icon.svg"
+        alt="Subtasks image"
+      />
+      <div id="add-task-select-subtasks-btn">
+        <img
+          id="add-task-select-subtasks-btn-clear"
+          onclick="clearInputField()"
+          src="./assets/img/subtask-close.svg"
+          alt="Close image"
+        />
+        <div class="subtask-divider"></div>
+        <img
+          id="add-task-select-subtasks-btn-done"
+          onclick="addSubtask()"
+          src="./assets/img/subtask-done.svg"
+          alt="Done image"
+        />
+      </div>
+    </div>
+
+    <div id="add-task-subtasks-container"></div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div id="header-image-container">
+  <img src="./assets/img/join-header-small-white.svg" alt="Join image" />
+</div>
+<div id="header-info-container">
+  <p>Kanban Project Management Tool</p>
+  <img
+    id="header-info-img"
+    src="./assets/img/header-questionmark-image.svg"
+    alt="Question mark image"
+    onclick="openHelp()"
+  />
+  <div id="header-user-profile-container" onclick="openMenu(); return false;">
+    <div id="header-user-profile-initials">
+      <span id="users-initial-first-letter"></span>
+      <span id="users-initial-second-letter"></span>
+    </div>
+  </div>
+</div>
+
+<div id="header-menu">
+  <div id="header-menu-links-help" class="header-menu-links">
+    <a onclick="openHelp(); return false;">Help</a>
+  </div>
+  <div class="header-menu-links">
+    <a onclick="showLegalNotice(); return false;">Legal Notice</a>
+  </div>
+  <div class="header-menu-links">
+    <a onclick="showPrivacyPolicy(); return false;">Privacy Police</a>
+  </div>
+  <div class="header-menu-links">
+    <a onclick="logOut(); return false;">Log out</a>
+  </div>
+</div>

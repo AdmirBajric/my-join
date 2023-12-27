@@ -1,0 +1,133 @@
+<div id="contacts-container-left">
+  <div onclick="addNewContact()" id="add-new-contact">
+    <p>Add new contact</p>
+    <img src="./assets/img/add-new-contact.svg" alt="Add new Contact image" />
+  </div>
+
+  <div id="contacts-list"></div>
+</div>
+
+<div id="contacts-container-right">
+  <div id="intro-contact-text">
+    <h2 id="intro-exist">
+      Please click on a contact to view their information.
+    </h2>
+    <h2 id="intro-not-exist">
+      You have no contacts, to view their information.
+    </h2>
+  </div>
+  <div id="contact-profile"></div>
+</div>
+
+<!-- Edit contact modal Start -->
+<div id="edit-contact-modal">
+  <div id="edit-contact">
+    <img
+      id="edit-modal-close"
+      src="./assets/img/contact-close.svg"
+      alt="Close image"
+    />
+    <div id="edit-modal-header">
+      <img src="./assets/img/join-small-white.svg" alt="Join image" />
+      <p>Edit contact</p>
+    </div>
+  </div>
+
+  <div id="edit-contact-modal-main">
+    <div id="edit-main-container">
+      <div id="edit-main-initials">
+        <p id="edit-main-initials-name"></p>
+        <p id="edit-main-initials-lastname"></p>
+      </div>
+
+      <div id="edit-main-form">
+        <div>
+          <input autocomplete="off" type="text" id="edit-main-form-full-name" />
+          <img src="./assets/img/person.svg" alt="Person image" />
+        </div>
+        <p class="edit-form-full-name-error">
+          Please enter a valid full name 'FirstName LastName'
+        </p>
+
+        <div>
+          <input autocomplete="off" type="text" id="edit-main-form-email" />
+          <img src="./assets/img/email.svg" alt="Email image" />
+        </div>
+        <p class="edit-form-email-error">Please enter a valid email</p>
+
+        <div>
+          <input autocomplete="off" type="text" id="edit-main-form-phone" />
+          <img src="./assets/img/phone.svg" alt="Phone image" />
+        </div>
+        <p class="edit-form-phone-error">Please enter a valid phone number</p>
+      </div>
+
+      <div id="edit-main-buttons"></div>
+    </div>
+  </div>
+</div>
+<!-- Edit contact modal End -->
+
+<!-- Add contact modal Start -->
+<div id="add-contact-modal">
+  <div id="add-contact">
+    <img
+      id="add-modal-close"
+      src="./assets/img/contact-close.svg"
+      alt="Close image"
+    />
+    <div id="add-modal-header">
+      <img src="./assets/img/join-small-white.svg" alt="Join image" />
+      <p>Add contact</p>
+      <p>Tasks are better with a team!</p>
+    </div>
+  </div>
+
+  <div id="add-contact-modal-main">
+    <div id="add-main-container">
+      <div id="add-main-initials">
+        <img src="./assets/img/person-white.svg" alt="Person image" />
+      </div>
+
+      <div id="add-main-form">
+        <div>
+          <input
+            autocomplete="off"
+            type="text"
+            placeholder="First Name Last Name"
+            id="add-main-form-full-name"
+          />
+          <img src="./assets/img/person.svg" alt="Person image" />
+        </div>
+        <p class="add-form-full-name-error">
+          Please enter a valid full name 'FirstName LastName'
+        </p>
+
+        <div>
+          <input
+            autocomplete="off"
+            type="text"
+            placeholder="Email"
+            id="add-main-form-email"
+          />
+          <img src="./assets/img/email.svg" alt="Email image" />
+        </div>
+        <p class="add-form-email-error">Please enter a valid email</p>
+
+        <div>
+          <input
+            autocomplete="off"
+            type="text"
+            placeholder="Phone"
+            id="add-main-form-phone"
+          />
+          <img src="./assets/img/phone.svg" alt="Phone image" />
+        </div>
+        <p class="add-form-phone-error">Please enter a valid phone number</p>
+      </div>
+
+      <div id="add-main-buttons"></div>
+    </div>
+  </div>
+</div>
+<!-- Add contact modal End -->

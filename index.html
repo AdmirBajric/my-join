@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/helper.css" />
+    <link rel="stylesheet" href="./styles/help.css" />
+    <link rel="stylesheet" href="./styles/legal-notice.css" />
+    <link rel="stylesheet" href="./styles/privacy-policy-index.css" />
+    <link rel="stylesheet" href="./styles/template-legal-notice-index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/forgot-reset-password.css" />
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <link rel="stylesheet" href="./styles/template-privacy-policy-index.css" />
+    <link rel="stylesheet" href="./styles/responsive-index.css" />
+    <title>Join</title>
+  </head>
+  <body onload="init(); includeHTML(); responsiveIndex()">
+    <main id="main-container">
+      <!-- Login Screen Start -->
+      <div id="login-section-container">
+        <div id="logo-big">
+          <img id="logo-big-img" src="./assets/img/join-big-white.svg" alt="Join big white" />
+        </div>
+        <div id="small-logo-blue">
+          <img id="small-logo-blue-img" src="./assets/img/join-small-blue.svg" alt="Join small blue" />
+        </div>
+        <div id="register-container">
+          <div id="register-text">
+            <p>Not a Join user?</p>
+          </div>
+          <button id="register-text-btn" onclick="signUpScreen()">Sign up</button>
+        </div>
+        <div id="log-in">
+          <div id="log-in-container">
+            <div id="log-in-header">
+              <h2 #log-in-header-title>Log in</h2>
+              <div id="log-in-header-divider"></div>
+            </div>
+            <form id="log-in-form" onsubmit="loginUser(); return false;">
+              <div id="log-in-form-email-container">
+                <input type="email" placeholder="Email" required autocomplete="on" id="log-in-form-email" />
+                <img src="./assets/img/email.svg" alt="Email image" id="log-in-form-email-img" />
+              </div>
+              <div id="log-in-form-password-container">
+                <input type="password" placeholder="Password" required autocomplete="off" id="log-in-form-password" />
+                <img src="./assets/img/password.svg" alt="Password image" id="log-in-form-password-img" />
+              </div>
+            </form>
+            <div id="log-in-assistance-container">
+              <div id="log-in-assistance-remember-me">
+                <img id="log-in-assistance-img" src="./assets/img/checkbox-empty.svg" alt="Checkbox img empty" />
+                <p>Rememeber me</p>
+              </div>
+              <div id="log-in-assistance-forgot-password">
+                <a id="log-in-forgot-password" onclick="showForgotPasswordScreen(); return false;"
+                  ><img id="log-in-forgot-password-img" src="./assets/img/forgot-password.svg" alt="Forgot password"
+                /></a>
+              </div>
+            </div>
+            <div id="log-in-buttons">
+              <button type="submit" form="log-in-form" id="log-in-btn">Log in</button>
+              <button id="guest-log-in-btn" onclick="guestLogIn()">Guest log in</button>
+            </div>
+          </div>
+        </div>
+        <div id="footer">
+          <a onclick="privacyPolicyIndex('index'); return false;">Privacy Policy</a>
+          <a onclick="legalNoticeIndex('index'); return false;">Legal Notice</a>
+        </div>
+      </div>
+      <!-- Login Screen End -->
+
+      <!-- Forgot Password Screen Start -->
+      <div id="forgot-password-section-container">
+        <div id="forgot-password-modal">
+          <img src="./assets/img/sendcheck-reset-password.svg" alt="Send check img" />
+          <p id="forgot-password-modal-paragraph">An E-Mail has been sent to you</p>
+        </div>
+        <div id="small-logo-white">
+          <img src="./assets/img/join-small-white.svg" alt="Join small white" />
+        </div>
+
+        <div id="forgot-password-container">
+          <div id="forgot-password">
+            <div id="forgot-password-back-btn" class="back-btn" onclick="backToIndex()">
+              <img id="forgot-password-back-img" class="back-img" src="./assets/img/arrow-left.svg" alt="Arrow Left" />
+            </div>
+            <div id="forgot-password-header">
+              <h2>I forgot my password</h2>
+              <div id="fogot-password-divider"></div>
+            </div>
+
+            <div id="forgot-password-topic">
+              <p>
+                Don`t worry! We will send you an email with the <br />
+                instructions to reset your password.
+              </p>
+            </div>
+
+            <form id="forgot-password-email" onsubmit="sendEmailToResetPassword(); return false;">
+              <div id="forgot-password-email-container">
+                <input type="email" placeholder="Email" required autocomplete="off" id="forgot-password-form-email" />
+                <img src="./assets/img/email.svg" alt="Email image" id="forgot-password-form-email-img" />
+              </div>
+            </form>
+
+            <button type="submit" form="forgot-password-email" id="forgot-password-btn">Send me the email</button>
+          </div>
+        </div>
+      </div>
+      <!-- Forgot Password Screen End -->
+
+      <!-- Reset Password Screen Start -->
+      <div id="reset-password-section-container">
+        <div id="reset-your-password-modal">
+          <p>You reset your password</p>
+        </div>
+        <div id="small-logo-white">
+          <img src="./assets/img/join-small-white.svg" alt="Join small white" />
+        </div>
+
+        <div id="reset-password-container">
+          <div id="reset-password">
+            <div id="reset-password-back-btn" class="back-btn" onclick="backToForgotPasswordScreen()">
+              <img id="reset-password-back-img" class="back-img" src="./assets/img/arrow-left.svg" alt="Arrow Left" />
+            </div>
+            <div id="reset-password-header">
+              <h2>Reset your password</h2>
+              <div id="reset-password-divider"></div>
+            </div>
+
+            <div id="reset-password-topic">
+              <p>Change your account password here</p>
+            </div>
+
+            <form id="reset-password-email" onsubmit="resetPassword(); return false;">
+              <div class="reset-password-email-container">
+                <input type="password" placeholder="New Password" minlength="5" required autocomplete="off" id="reset-password-form-email" />
+              </div>
+              <div class="reset-password-email-container">
+                <input type="password" placeholder="Confirm Password" minlength="5" required autocomplete="off" id="reset-password-confirm-form-email" />
+              </div>
+            </form>
+
+            <button type="submit" form="reset-password-email" id="reset-password-btn">Continue</button>
+          </div>
+        </div>
+      </div>
+      <!-- Reset Password Screen End -->
+
+      <!-- Sign up Screen Start -->
+      <div id="signup-section-container">
+        <div id="small-logo-white">
+          <img src="./assets/img/join-small-white.svg" alt="Join small white" />
+        </div>
+
+        <div id="sign-up-container">
+          <div id="sign-up">
+            <div id="sign-up-back-btn" class="back-btn" onclick="backToIndex()">
+              <img id="sign-up-back-img" class="back-img" src="./assets/img/arrow-left.svg" alt="Arrow Left" />
+            </div>
+            <div id="sign-up-header">
+              <h2>Sign up</h2>
+              <div id="sign-up-divider"></div>
+            </div>
+
+            <form id="sign-up-form" onsubmit="signUp(); return false;">
+              <div class="sign-up-container">
+                <input
+                  type="text"
+                  placeholder="Name and Lastname"
+                  pattern="^[A-Za-z]+ [A-Za-z]+$"
+                  title="Please enter a name with a space separating the first and last name"
+                  required
+                  autocomplete="off"
+                  id="sign-up-name"
+                />
+                <img src="./assets/img/person.svg" alt="Person img" />
+              </div>
+
+              <div class="sign-up-container">
+                <input type="email" placeholder="Email" required autocomplete="off" id="sign-up-email" />
+                <img src="./assets/img/email.svg" alt="Email img" />
+              </div>
+
+              <div class="sign-up-container">
+                <input type="password" placeholder="Password" minlength="5" required autocomplete="off" id="sign-up-password" />
+                <img src="./assets/img/password.svg" alt="Password img" />
+              </div>
+
+              <div class="sign-up-container">
+                <input type="password" placeholder="Confirm Password" minlength="5" required autocomplete="off" id="sign-up-confirm-password" />
+                <img src="./assets/img/password.svg" alt="Password img" />
+              </div>
+            </form>
+
+            <div id="privacy-policy-container">
+              <div class="privacy-policy-container">
+                <img id="privacy-policy-img" src="./assets/img/checkbox-empty.svg" alt="Checkbox image" />
+                <p id="privacy-policy-paragraph">I accept the</p>
+                <a onclick="privacyPolicyIndex('signup')" id="privacy-policy-link">Privacy policy</a>
+              </div>
+              <p class="privacy-policy">Please read and accept our Privacy Policy</p>
+            </div>
+
+            <button type="submit" form="sign-up-form" id="sign-up-btn">Sign up</button>
+          </div>
+        </div>
+
+        <div id="sign-up-footer">
+          <a onclick="privacyPolicyIndex('signup'); return false;">Privacy Policy</a>
+          <a onclick="legalNoticeIndex('signup'); return false;">Legal Notice</a>
+        </div>
+
+        <div id="sign-up-modal">
+          <p>You Signed Up successfully</p>
+        </div>
+      </div>
+      <!-- Sign up Screen End -->
+
+      <!-- Privacy Policy Start -->
+      <div id="privacy-policy-index-container" w3-include-html="./assets/templates/template-privacy-policy-index.html"></div>
+      <!-- Privacy Policy End -->
+
+      <!-- Legal Notice Start -->
+      <div id="legal-notice-index-container" w3-include-html="./assets/templates/template-legal-notice-index.html"></div>
+      <!-- Legal Notice End -->
+
+      <!-- Login Error Message Start -->
+      <div id="log-in-error-modal">
+        <p>Invalid credentials or</p>
+        <br />
+        <p>user not registered</p>
+      </div>
+      <!-- Login Error Message End -->
+    </main>
+
+    <script defer src="./js/helper.js"></script>
+    <script defer src="./js/signup.js"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/forgot-reset-password.js"></script>
+    <script defer src="./js/storage.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/responsive-index.js"></script>
+  </body>
+</html>

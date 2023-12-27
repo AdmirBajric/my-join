@@ -1,0 +1,340 @@
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+  color: var(--black);
+  scroll-behavior: smooth;
+}
+
+#main-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#login-section-container {
+  width: 100%;
+  height: 100%;
+}
+
+#logo-big,
+#logo-big img {
+  width: 26.5rem;
+  height: 32.3rem;
+}
+
+#logo-big img {
+  position: absolute;
+  top: 8rem;
+  left: 7.7rem;
+  width: 26.5rem;
+  height: 32.3rem;
+  top: calc(50% - 16.15rem);
+  left: calc(50% - 13.25rem);
+}
+
+#small-logo-blue {
+  position: absolute;
+  width: 10rem;
+  height: 12.2rem;
+  top: 8rem;
+  left: 7.7rem;
+}
+
+@keyframes moveAndResizeImage {
+  0% {
+    width: 26.5rem;
+    height: 32.3rem;
+    top: calc(50% - 16.15rem);
+    left: calc(50% - 13.25rem);
+  }
+  100% {
+    top: 8rem;
+    left: 7.7rem;
+    width: 10rem;
+    height: 12.2rem;
+  }
+}
+
+#register-container {
+  position: absolute;
+  top: 6.7rem;
+  right: 8.6rem;
+  width: 31.5rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+#register-text {
+  width: 16.8rem;
+  height: 2.8rem;
+}
+
+#register-text p {
+  color: var(--black);
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#register-text-btn {
+  width: 11.2rem;
+  height: 4.8rem;
+  padding: 1rem 1.6rem;
+  border: unset;
+  border-radius: 0.8rem;
+  background: var(--mainColor);
+
+  color: var(--white);
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#register-text-btn:hover,
+#log-in-btn:hover {
+  cursor: pointer;
+  background: var(--btnHoverColor);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#register-text-btn:active,
+#log-in-btn:active {
+  color: var(--mainColor);
+  background: var(--white);
+}
+
+#log-in {
+  position: absolute;
+  width: 65.2rem;
+  height: 51rem;
+  top: calc(50% - 25.5rem);
+  left: calc(50% - 32.6rem);
+
+  border-radius: 3rem;
+  background: var(--white);
+  box-shadow: 0rem 0rem 1rem 0.3rem rgba(0, 0, 0, 0.08);
+
+  display: none;
+}
+
+#log-in-container {
+  width: 100%;
+  height: 100%;
+  padding: 4.8rem 11.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#log-in-header {
+  width: 31.5rem;
+  height: 7.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+#log-in-header h2 {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#log-in-header-divider {
+  width: 15rem;
+  height: 0.3rem;
+  background: var(--mainColor);
+}
+
+#log-in-form {
+  width: 42.2rem;
+  height: 15.2rem;
+}
+
+#log-in-form-email-container,
+#log-in-form-password-container {
+  width: 100%;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--inputStyle);
+  padding: 12px 21px;
+}
+
+#log-in-form-password-container {
+  margin-top: 3.2rem;
+}
+
+#log-in-form-email,
+#log-in-form-password {
+  border: unset;
+  width: 95%;
+  font-size: 1.9rem;
+  font-weight: var(--fontW2);
+  font-style: normal;
+  line-height: 120%;
+  background-color: var(--white);
+}
+
+#log-in-form-email::placeholder,
+#log-in-form-password::placeholder {
+  color: var(--inputStyle);
+}
+
+#log-in-form-email:focus,
+#log-in-form-password:focus {
+  outline: none;
+}
+
+#log-in-assistance-container {
+  width: 35.5rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#log-in-assistance-remember-me {
+  width: 16rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#log-in-assistance-remember-me p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+}
+
+#log-in-assistance-forgot-password {
+  width: 15.8rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+}
+
+#log-in-assistance-img,
+#log-in-forgot-password-img {
+  cursor: pointer;
+}
+
+#log-in-forgot-password {
+  color: var(--mainColor);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+}
+
+#log-in-buttons {
+  width: 36.7rem;
+  height: 4.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#log-in-btn {
+  width: 13.5rem;
+  height: 4.8rem;
+  border: unset;
+  border-radius: 0.8rem;
+  background: var(--mainColor);
+  color: var(--white);
+
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+}
+
+#guest-log-in-btn {
+  width: 19.7rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--guestLoginBtn);
+  background: var(--white);
+
+  color: var(--guestLoginBtn);
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+  cursor: pointer;
+}
+
+#guest-log-in-btn:hover {
+  border: 0.2rem solid var(--mainColor);
+  color: var(--mainColor);
+  transform: scale(1.01);
+  box-shadow: 0rem 0.4rem 0.8rem 0rem rgba(0, 0, 0, 0.2);
+}
+
+#footer {
+  width: 24rem;
+  height: 3.5rem;
+  position: absolute;
+  bottom: 4.2rem;
+  left: calc(50% - 12rem);
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+
+#footer a {
+  color: var(--footerLinks);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontW2);
+  line-height: 120%;
+}
+
+#footer a:hover {
+  cursor: pointer;
+  color: var(--mainColor);
+}
+
+#log-in-error-modal {
+  width: 36rem;
+  padding: 1rem;
+  position: absolute;
+  left: calc(50% - 18rem);
+  top: -15%;
+  border-radius: 2rem;
+  background: var(--mainColor);
+  box-shadow: 0rem 0rem 0.4rem 0rem rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s ease-in-out;
+}
+
+#log-in-error-modal p {
+  color: var(--white);
+  font-family: Open Sans;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}

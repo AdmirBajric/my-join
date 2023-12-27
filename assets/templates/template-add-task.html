@@ -1,0 +1,159 @@
+<div class="add-task-left-container">
+  <div class="add-task-title-container">
+    <div class="add-task-title">
+      <input
+        class="add-task-title-input"
+        type="text"
+        required
+        placeholder="Enter a title"
+      />
+    </div>
+    <p class="add-task-title-err-msg">This field is required</p>
+  </div>
+
+  <div class="add-task-description">
+    <div>
+      <p>Description</p>
+    </div>
+    <textarea
+      placeholder="Enter a description"
+      name="Description"
+      class="add-task-textarea-description"
+    ></textarea>
+    <p class="add-task-description-err-msg">This field is required</p>
+  </div>
+
+  <div class="add-task-date">
+    <p>Due date</p>
+    <div class="date">
+      <input class="date-calendar" type="date" required />
+      <img
+        class="date-img"
+        src="./assets/img/add-task-date.svg"
+        alt="Date image"
+      />
+    </div>
+    <p class="add-task-date-err-msg">This field is required</p>
+  </div>
+
+  <div class="add-task-priority">
+    <p>Priority</p>
+    <div class="priority">
+      <div id="priority-urgent" onclick="priorityUrgent()">
+        <p>Urgent</p>
+        <img
+          class="urgent-img"
+          src="./assets//img/urgent.svg"
+          alt="Prio urgent"
+        />
+      </div>
+
+      <div id="priority-medium" onclick="priorityMedia()">
+        <p>Medium</p>
+        <img
+          class="media-img"
+          src="./assets/img/medium.svg"
+          alt="Prio medium"
+        />
+      </div>
+
+      <div id="priority-low" onclick="priorityLow()">
+        <p>Low</p>
+        <img class="low-img" src="./assets/img/low.svg" alt="Prio low" />
+      </div>
+    </div>
+  </div>
+
+  <div id="add-task-assigned" class="add-task-assigned">
+    <p>Assigned to</p>
+    <div class="add-task-assigned-contacts">
+      <p class="add-task-assigned-contacts-info">Select contacts to assign</p>
+      <input
+        autocomplete="off"
+        class="add-task-assigned-contacts-input"
+        type="text"
+      />
+      <a href="#add-task-assigned">
+        <img
+          class="assigned-contacts-img"
+          src="./assets/img/arrow-dropdown-down.svg"
+          alt="Assigned image"
+        />
+      </a>
+    </div>
+
+    <div class="add-task-all-contacts"></div>
+    <div class="add-task-selected-contacts"></div>
+  </div>
+
+  <div class="add-task-category">
+    <p>Category</p>
+    <div class="add-task-select-category">
+      <p>Select task category</p>
+      <img
+        class="select-category-img"
+        src="./assets/img/arrow-dropdown-down.svg"
+        alt="Catgeroy image"
+      />
+    </div>
+    <p class="add-task-category-err-msg">This field is required</p>
+
+    <div class="add-task-category-list"></div>
+  </div>
+
+  <div class="add-task-subtasks">
+    <p>Subtasks</p>
+    <div class="add-task-select-subtasks">
+      <input
+        class="add-task-select-subtasks-input"
+        type="text"
+        placeholder="Add new subtask"
+      />
+      <img
+        class="add-task-select-subtasks-img"
+        src="./assets/img/subtask-icon.svg"
+        alt="Subtasks image"
+      />
+      <div class="add-task-select-subtasks-btn">
+        <img
+          class="add-task-select-subtasks-btn-clear"
+          onclick="clearInputField()"
+          src="./assets/img/subtask-close.svg"
+          alt="Close image"
+        />
+        <div class="subtask-divider"></div>
+        <img
+          class="add-task-select-subtasks-btn-done"
+          onclick="addSubtask(event)"
+          src="./assets/img/subtask-done.svg"
+          alt="Done image"
+        />
+      </div>
+    </div>
+
+    <div class="add-task-subtasks-container"></div>
+  </div>
+  <button onclick="createNewTask(event)" class="add-task-modal-btn">
+    <p>Create Task</p>
+    <img src="./assets/img/modal-check.svg" alt="Check img" />
+  </button>
+</div>
+
+<div class="add-task-right-container">
+  <div class="add-task-buttons">
+    <button onclick="clearForm()" class="add-task-clear-btn">
+      <p>Clear</p>
+      <img src="./assets/img/icon-cancel.svg" alt="Icon cancel image" />
+    </button>
+
+    <button onclick="createNewTask(event)" class="add-task-create-task">
+      <p>Create Task</p>
+      <img src="./assets/img/add-task-check.svg" alt="Check task image" />
+    </button>
+  </div>
+</div>
+
+<div class="task-added-to-board">
+  <p>Task added to board</p>
+  <img src="./assets/img/task-added.svg" alt="Task added image" />
+</div>

@@ -1,0 +1,57 @@
+:root {
+  --mainColor: #4589ff;
+  --btnHoverColor: #005dff;
+  --inputStyle: #d1d1d1;
+  --guestLoginBtn: #647188;
+  --footerLinks: #42526e;
+  --summaryColor: #2a3647;
+  --menuBackGround: #d2e3ff;
+  --menuInitials: #b5dbffff;
+  --lightBackground: #e3eeff;
+  --divider: #a8a8a8;
+  --noTask: #e7e7e7;
+  --progressPercent: #f4f4f4;
+  --boardCards: #ff7a00;
+  --btnActive: #091931;
+  --scrollThumb: #bcbcbc;
+  --error: #d70707;
+  --errorTxt: #fa4444;
+  --priority-urgent: #ff3d00;
+  --priority-medium: #ffa800;
+  --priority-low: #7ae229;
+  --white: #fff;
+  --black: #000;
+  --font: Open Sans;
+  --fontw1: 300;
+  --fontw2: 500;
+  --fontw3: 600;
+  --fontw4: 700;
+  --fontw5: 800;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  user-select: none;
+  scroll-behavior: smooth !important;
+}
+
+input {
+  border: unset;
+  outline: none;
+}

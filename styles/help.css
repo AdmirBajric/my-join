@@ -1,0 +1,172 @@
+#help-container {
+  width: 100%;
+  height: 100%;
+  padding: 7rem 10rem;
+
+  overflow-y: scroll;
+  position: absolute;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #eee;
+
+  display: none;
+}
+
+#help-header {
+  width: 100%;
+  height: 7.3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#help-header h2 {
+  color: var(--black);
+  font-size: 6.1rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#help-main-container {
+  width: 100%;
+  margin-top: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#join-introduction {
+  width: 100%;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#join-introduction span,
+#join-what-is-join-explanation span {
+  color: var(--mainColor);
+}
+
+#join-what-is-join {
+  width: 100%;
+}
+
+#join-what-is-join-header {
+  color: var(--mainColor);
+  font-size: 3.3rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#join-what-is-join-explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#join-how-to-use {
+  color: var(--mainColor);
+  font-size: 3.3rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+#join-how-to-use-it-explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#join-step-by-step-guide {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#join-step-by-step-guide span {
+  color: var(--mainColor);
+}
+
+.join-how-to-use-it-explanation-enumeration {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join-one {
+  width: 2.9rem;
+  color: var(--btnHoverColor);
+  font-size: 3.3rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.join-how-to-use-it-explanation-enumeration-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0rem 2rem;
+}
+
+.join-how-to-use-it-explanation-enumeration-description p:first-child {
+  color: var(--btnHoverColor);
+  font-size: 1.9rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.join-how-to-use-it-explanation-enumeration-description span {
+  color: var(--mainColor);
+}
+
+.join-how-to-use-it-explanation-enumeration-description p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: var(--fontw2);
+  line-height: 120%;
+}
+
+#join-enjoy {
+  color: var(--mainColor);
+  font-size: 3.3rem;
+  font-style: normal;
+  font-weight: var(--fontw4);
+  line-height: 120%;
+}
+
+.help-header-img {
+  cursor: pointer;
+}
+
+#help-container::-webkit-scrollbar {
+  width: 6px; /* Breite des Scrollbalkens für Webkit-Browser (Chrome, Safari) */
+}
+
+#help-container::-webkit-scrollbar-thumb {
+  background-color: #bcbcbc;
+}
+
+#help-container::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+#join-introduction,
+#join-what-is-join,
+#join-how-to-use,
+#join-step-by-step-guide,
+.join-how-to-use-it-explanation-enumeration {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
